@@ -1,0 +1,19 @@
+﻿@model HomeViewModel
+
+    <h2> As camisas mais vendidas da semana !!! </h2>
+    <h4> Ta esperando o que pra comprar a sua ?! </h4>
+
+    @await Html.PartialAsync("_Carousel")
+
+
+
+
+<div class="row">
+    @foreach (var camisa in Model.camisasMaisVendidas)
+    {
+        @*@Html.Partial("_LanchesResumo", lanche)*@
+        <partial name="_CamisaResumo" for="@camisa" />
+    }
+
+</div>
+

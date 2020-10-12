@@ -1,0 +1,14 @@
+﻿@model CamisaListViewModel
+
+
+ <h2> @Model.CategoriaAtual </h2>
+ <div class="row">
+     @foreach (var camisa in Model.Camisas)
+     {
+         //Método obsoleto para acionar uma PartiaViewl
+         // @Html.Partial("_CamisaResumo", camisa);
+         //Método atual para acionar uma PartiaViewl
+         <partial name="_CamisaResumo" , for="@camisa" />
+
+     }
+ </div>
